@@ -3,8 +3,7 @@ package com.example.excel;
 import java.util.Scanner;
 
 public class excelTerminal {
-    private int sheetNum;
-
+    excelFileClass file = new excelFileClass("excel", "");
     public static void main(String[] args) {
         StarterDialog();
 
@@ -21,5 +20,6 @@ public class excelTerminal {
         if(sheetNum == 1) {
             System.out.print("Please incert ");
         }
+
     }
 }

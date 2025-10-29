@@ -29,7 +29,10 @@ public class excelFileClass {
         this.sheets = sheets;
     }
 
-    public excelFileClass(String name) {
+    public excelFileClass(String name, String path) {
         this.name = name;
+        this.path = path;
+
+        
     } 
 }
