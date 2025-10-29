@@ -1,4 +1,4 @@
-package com.example.excel;
+package com.example.excelExamples;
 
 import java.io.File;
 import java.io.FileOutputStream;

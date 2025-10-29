@@ -1,4 +1,4 @@
-package com.example.excel;
+package com.example.excelExamples;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,12 +13,12 @@ public class ExcelReader {
     private Workbook workbook;
     private Sheet sheet;
 
-    private ExcelReader(File excelFile) throws InvalidFormatException, IOException {
-        workbook = new XSSFWorkbook();
+    private ExcelReader(File excelFile) throws InvalidFormatException, IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
+        workbook = new XSSFWorkbook(excelFile);
         sheet = workbook.getSheetAt(0);
     }
 
-    public static void main(String[] args) throws InvalidFormatException, IOException {
+    public static void main(String[] args) throws InvalidFormatException, IOException, org.apache.poi.openxml4j.exceptions.InvalidFormatException {
         File excelFile = Paths.get("").resolve("excel.xlsx").toFile();
         ExcelReader reader = new ExcelReader(excelFile);
         reader.readFromExcelFile();
